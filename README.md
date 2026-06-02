@@ -27,13 +27,16 @@ For each utterance the system shows:
 
 ```
 realtime-multimodal-emotion-recognition/
-├── application/      Desktop app (PySide6 GUI)
+├── application/        Desktop app (PySide6 GUI)
 │   ├── main.py
 │   ├── run.bat
-│   ├── src/                modules: pipeline, audio, video, UI, ...
-│   ├── tests/              standalone test scripts for each model
-│   └── models/             trained models and Vosk STT data
-└── notebooks/        Colab training notebooks for Vision, SER, NLP
+│   ├── requirements.txt
+│   ├── benchmark.py            performance benchmark script
+│   ├── benchmark_results.json  measured inference latencies
+│   ├── src/                    modules: pipeline, audio, video, UI, ...
+│   ├── tests/                  standalone test scripts for each model
+│   └── models/                 trained models and Vosk STT data
+└── colab_notebooks/    training notebooks for Vision, SER, NLP
 ```
 
 ## Models in the pipeline
@@ -56,7 +59,7 @@ update at utterance boundaries (driven by Silero VAD). The fusion layer is
 a weighted average:
 
 - Vision: continuous, weight 0.50
-- SER: per-utterance, weight 0.35, exponential decay (half-life 2 s)
+- SER: per-utterance, weight 0.35, exponential decay (half-life 2.5 s)
 - NLP: per-utterance, weight 0.15, exponential decay (half-life 2 s),
   ignored entirely below 0.60 confidence
 - Vision is also forgotten if no face has been seen for 5 s
@@ -66,8 +69,10 @@ fixed boost matrix.
 
 ## Getting started
 
-See `application/README.md` for setup, dependencies, and how to run the
-desktop app. See `notebooks/README.md` for the training notebooks.
+See [`application/README.md`](application/README.md) for setup,
+dependencies, and how to run the desktop app.
+See [`colab_notebooks/README.md`](colab_notebooks/README.md) for the
+training notebooks.
 
 ## License
 

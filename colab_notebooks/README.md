@@ -9,9 +9,9 @@ to Google Drive.
 
 | Notebook | Trained model | Test accuracy |
 |---|---|---|
-| `vision_training.ipynb` | `vision_ferplus.keras` | ~79.4% (6 classes) |
-| `ser_training.ipynb`    | `ser_cnn_bilstm.keras` | ~69.4% (6 classes) |
-| `nlp_training.ipynb`    | `mixed_nlp.keras` | ~72% (3 classes) |
+| `vision_ferplus.ipynb`  | `vision_ferplus.keras` | ~79.4% (6 classes) |
+| `ser_cnn_bilstm.ipynb`  | `ser_cnn_bilstm.keras` | ~69.4% (6 classes) |
+| `nlp.ipynb`             | `mixed_nlp.keras`      | ~72% (3 classes) |
 
 ## How to run
 

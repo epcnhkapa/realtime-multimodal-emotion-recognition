@@ -76,6 +76,18 @@ vocabulary and Windows' default cp1254 encoding breaks the load. The
 The language selector (English / Türkçe) controls the Vosk model used for
 speech-to-text. NLP works on both languages without needing to switch.
 
+## Performance benchmarks
+
+`benchmark.py` measures the per-inference latency of each model on the
+current machine. Results from the development laptop are stored in
+`benchmark_results.json` for reference.
+
+To re-run on your own hardware:
+
+```
+py -3.13 -X utf8 benchmark.py
+```
+
 ## Project structure
 
 ```
@@ -83,6 +95,8 @@ application/
 ├── main.py                  app entry point
 ├── run.bat                  Windows launcher with UTF-8 enforced
 ├── requirements.txt         Python dependencies
+├── benchmark.py             performance benchmark script
+├── benchmark_results.json   measured inference latencies
 ├── src/
 │   ├── config.py            all constants (thresholds, paths, weights)
 │   ├── models_loader.py     single point of model loading
