@@ -58,8 +58,8 @@ Modalities run on different time scales: Vision is continuous, SER and NLP
 update at utterance boundaries (driven by Silero VAD). The fusion layer is
 a weighted average:
 
-- Vision: continuous, weight 0.50
-- SER: per-utterance, weight 0.35, exponential decay (half-life 2.5 s)
+- Vision: continuous, weight 0.40
+- SER: per-utterance, weight 0.45, exponential decay (half-life 2.5 s)
 - NLP: per-utterance, weight 0.15, exponential decay (half-life 2 s),
   ignored entirely below 0.60 confidence
 - Vision is also forgotten if no face has been seen for 5 s
