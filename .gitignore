@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+.venv-final/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temp files
+*.tmp
+*.log
+*.bak
+
+# Local user uploads / outputs
+assets/uploads/
+assets/outputs/

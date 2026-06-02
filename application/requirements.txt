@@ -1,0 +1,13 @@
+tensorflow==2.21.0
+numpy>=2.0
+librosa>=0.11
+soundfile>=0.13
+opencv-python>=4.10
+pillow>=11.0
+sounddevice>=0.5
+torch>=2.10
+silero-vad>=6.0
+vosk>=0.3.45
+mediapipe>=0.10.30
+imageio-ffmpeg>=0.5
+PySide6>=6.10
